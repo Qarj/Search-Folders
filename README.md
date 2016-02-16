@@ -1,10 +1,10 @@
-# SearchFolders
+# SearchFolders 0.01
 Search windows network folders for files containing a string
 
 ## Usage:
 
 ```
-SearchFolders.pl [target folder without trailing \] [extensions to check] [search text]
+SearchFolders.pl [target folder without trailing \] [extension to check] [search string]
 ```
 
 Example:
