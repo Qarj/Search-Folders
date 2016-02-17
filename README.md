@@ -13,14 +13,21 @@ Only for Windows.
 SearchFolders.pl [target folder without trailing \] [extension to check] [search string]
 ```
 
+The search string is a Perl regular expression, so escape special characters with a backslash.
+
 ## Examples:
 
 Over a UNC:
 ```
-SearchFolders.pl \\IRON\C$\webinject .txt devenv
+SearchFolders.pl \\IRON\C$\webinject txt devenv
 ```
 
-With spaces in path or search text:
+Escaping special characters:
+```
+SearchFolders.pl \\IRON\C$\webinject txt \.example\.com
+```
+
+With spaces in path or search text including sample output:
 ```
 SearchFolders.pl "C:\Program Files" xml "critical state"
 
