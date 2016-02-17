@@ -52,7 +52,8 @@ print "\n\n$allmatches matches total in $filematches files out of $fileschecked 
 
 # Build a list of files to examine in an array
 sub build_list_of_files_to_check {
-    @filestocheck = (`dir /S /B $path$filter`);
+
+    @filestocheck = (`dir /S /B /A-D "$path$filter"`);
 
     return;
 }
