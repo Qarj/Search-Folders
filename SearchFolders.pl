@@ -8,9 +8,10 @@ use strict;
 use warnings;
 use vars qw/ $VERSION /;
 
-$VERSION = '0.01';
+$VERSION = '0.03';
 
 use File::Basename;
+use Time::HiRes 'time';
 
 ## USAGE:
 ## SearchFolders.pl \\IRON\C$\webinject .txt devenv
@@ -44,7 +45,7 @@ build_list_of_files_to_check();
 
 search_all_files();
 
-print "\n\n$allmatches matches total in $filematches files out of $fileschecked files searched\n";
+print "\n$allmatches matches total in $filematches files out of $fileschecked files searched\n";
 
 #
 # end of script - subroutines follow
@@ -53,17 +54,28 @@ print "\n\n$allmatches matches total in $filematches files out of $fileschecked 
 # Build a list of files to examine in an array
 sub build_list_of_files_to_check {
 
+    my $start_time = time;
+
     @filestocheck = (`dir /S /B /A-D "$path$filter"`);
 
+    my $run_time = (int(1000 * (time - $start_time)) / 1000);
+    print "Built file list in $run_time seconds\n";
+    
     return;
 }
 
 # Iterate over the files
 sub search_all_files {
+
+    my $start_time = time;
+
     foreach my $checkfile (@filestocheck)
     {
         examine_file ($checkfile);
     }
+
+    my $run_time = (int(1000 * (time - $start_time)) / 1000);
+    print "\nSearched files in $run_time seconds\n";
 
     return;
 }

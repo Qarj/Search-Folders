@@ -1,4 +1,4 @@
-# SearchFolders 0.02
+# SearchFolders 0.03
 Search windows network folders for files containing a string
 
 ## About:
@@ -35,6 +35,7 @@ Search base path  : C:\Program Files
 Search extension  : xml
 Search target for : critical state
 
+Built file list in 0.15 seconds
 
 [1] C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\en\Microsoft.SqlServer.Management.Utility.xml:
       <summary>The operation is in a critical state.</summary>
@@ -52,6 +53,7 @@ Search target for : critical state
       <summary>The policy is in a critical state.</summary>
 
 
+Searched files in 0.285 seconds
 
 4 matches total in 4 files out of 1592 files searched
 
