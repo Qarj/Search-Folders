@@ -45,7 +45,7 @@ build_list_of_files_to_check();
 
 search_all_files();
 
-print "\n$allmatches matches total in $filematches files out of $fileschecked files searched\n";
+print "\nFound $allmatches matches total in $filematches files out of $fileschecked files searched\n";
 
 #
 # end of script - subroutines follow
