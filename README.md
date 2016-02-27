@@ -1,4 +1,4 @@
-# SearchFolders 0.03
+# SearchFolders 0.04
 Search windows network folders for files containing a string
 
 ## About:

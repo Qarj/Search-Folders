@@ -6,6 +6,9 @@ Tim Buckland, https://github.com/Qarj/SearchFolders
 
 ## Release History:
 
+### Version 0.04 - Feb 27, 2016
+* made the search case insensitive
+
 ### Version 0.03 - Feb 17, 2016
 * show time to build the file list and to search the files
 
