@@ -36,7 +36,7 @@ if (!$target) { die "\nNeed a word to search for - e.g. findthis\n"; }
 print "\n";
 print "Search base path  : $path\n";
 print "Search extension  : $extension\n";
-print "Search target for : $target\n\n";
+print "Search target for : $target [case insensitive]\n\n";
 
 # add on the *.txt extension or whatever supplied
 my $filter = '\*'."$extension";
@@ -96,7 +96,7 @@ sub examine_file {
 
     while (<$handle>) {
 
-        if ($_ =~ m/$target/) {
+        if ($_ =~ m/$target/i) {
 
             # keep track of number of matches found
             $match = $match + 1;
