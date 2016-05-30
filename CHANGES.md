@@ -1,4 +1,4 @@
-# SearchFolders change log
+# Search-Folders change log
 
 Tim Buckland, https://github.com/Qarj/SearchFolders
 

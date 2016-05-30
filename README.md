@@ -1,4 +1,4 @@
-# SearchFolders 0.04
+# Search-Folders 0.04
 Search windows network folders for files containing a string
 
 ## About:
@@ -10,7 +10,7 @@ Only for Windows.
 ## Usage:
 
 ```
-SearchFolders.pl [target folder without trailing \] [extension to check] [search string]
+Search-Folders.pl [target folder without trailing \] [extension to check] [search string]
 ```
 
 The search string is a Perl regular expression, so escape special characters with a backslash.
@@ -19,17 +19,17 @@ The search string is a Perl regular expression, so escape special characters wit
 
 Over a UNC:
 ```
-SearchFolders.pl \\IRON\C$\webinject txt devenv
+Search-Folders.pl \\IRON\C$\webinject txt devenv
 ```
 
 Escaping special characters:
 ```
-SearchFolders.pl \\IRON\C$\webinject txt \.example\.com
+Search-Folders.pl \\IRON\C$\webinject txt \.example\.com
 ```
 
 With spaces in path or search text including sample output:
 ```
-SearchFolders.pl "C:\Program Files" xml "critical state"
+Search-Folders.pl "C:\Program Files" xml "critical state"
 
 Search base path  : C:\Program Files
 Search extension  : xml
